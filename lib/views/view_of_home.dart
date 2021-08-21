@@ -1,7 +1,7 @@
 import 'package:bloc_patterns_contacts/pages/models/contact_model.dart';
 import 'package:flutter/material.dart';
 
-import '../item_of_contact.dart';
+import 'item_of_contact.dart';
 
 Widget viewOfHome(BuildContext context, List<Contact> items, bool isLoading) {
   return Stack(
