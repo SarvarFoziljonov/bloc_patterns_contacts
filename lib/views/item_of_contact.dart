@@ -2,7 +2,6 @@ import 'package:bloc_patterns_contacts/models/contact_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-
 import '../blocs/list_contact_cubit.dart';
 
 Widget itemOfList({BuildContext context, Contact contact}) {

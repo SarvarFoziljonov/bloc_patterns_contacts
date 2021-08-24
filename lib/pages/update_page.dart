@@ -29,7 +29,7 @@ class UpdatePage extends StatelessWidget {
       create: (context) => UpdateContactCubit(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Update a Post"),
+          title: Text("Update a Contact"),
         ),
         body: BlocBuilder<UpdateContactCubit, UpdateContactState>(
           builder: (BuildContext context, UpdateContactState state) {

@@ -29,7 +29,8 @@ class _CreatePageState extends State<CreatePage> {
       create: (context) => CreateContactCubit(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Add Post"),
+          backgroundColor: Colors.black,
+          title: Text("Create Contact"),
         ),
         body: BlocBuilder<CreateContactCubit, CreateContactState>(
           builder: (BuildContext context, CreateContactState state) {
@@ -40,7 +41,6 @@ class _CreatePageState extends State<CreatePage> {
               _finish(context);
             }
             if(state is CreateContactError){
-
             }
             return viewOfCreate(false,context,fullnameController,phoneController);
           },

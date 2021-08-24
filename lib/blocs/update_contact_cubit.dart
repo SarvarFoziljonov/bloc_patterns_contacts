@@ -7,7 +7,7 @@ class UpdateContactCubit extends Cubit<UpdateContactState>  {
   UpdateContactCubit() : super(UpdateContactInit());
 
 
-  void apiPostUpdate(Contact contact) async{
+  void apiContactUpdate(Contact contact) async{
     print(contact.toJson());
     emit(UpdateContactLoading());
     final response = await Network.PUT(Network.API_UPDATE + contact.id.toString(), Network.paramsUpdate(contact));

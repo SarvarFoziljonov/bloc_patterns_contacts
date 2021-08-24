@@ -13,13 +13,13 @@ Widget viewOfUpdate(bool isLoading, BuildContext context, Contact contact,TextEd
             TextField(
               controller: fullnameController,
               decoration: InputDecoration(
-                  hintText: "Title",
+                  hintText: "Fullname",
                   hintStyle: TextStyle(color: Colors.grey)),
             ),
             TextField(
               controller: phoneController,
               decoration: InputDecoration(
-                  hintText: "Body",
+                  hintText: "Phone number",
                   hintStyle: TextStyle(color: Colors.grey)),
             ),
             SizedBox(
@@ -27,7 +27,7 @@ Widget viewOfUpdate(bool isLoading, BuildContext context, Contact contact,TextEd
             ),
             FlatButton(
               onPressed: () {
-                BlocProvider.of<UpdateContactCubit>(context).apiPostUpdate(contact);
+                BlocProvider.of<UpdateContactCubit>(context).apiContactUpdate(contact);
               },
               color: Colors.blue,
               child: Text(

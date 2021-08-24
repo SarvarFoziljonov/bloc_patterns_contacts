@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CreateContactCubit extends Cubit<CreateContactState>  {
   CreateContactCubit() : super(CreateContactInit());
 
-
   void apiPostCreate(Contact contact) async{
     print(contact.toJson());
     emit(CreateContactLoading());
