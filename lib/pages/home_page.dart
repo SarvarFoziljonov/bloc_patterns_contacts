@@ -1,10 +1,10 @@
 import 'package:bloc_patterns_contacts/blocs/list_contact_cubit.dart';
 import 'package:bloc_patterns_contacts/blocs/list_contact_state.dart';
+import 'package:bloc_patterns_contacts/models/contact_model.dart';
 import 'package:bloc_patterns_contacts/views/view_of_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'models/contact_model.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         onPressed: () {
+          BlocProvider.of<ListContactCubit>(context).callCreatePage(context);
         },
       ),
     );

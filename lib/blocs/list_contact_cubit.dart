@@ -1,5 +1,7 @@
-import 'package:bloc_patterns_contacts/pages/models/contact_model.dart';
+import 'package:bloc_patterns_contacts/models/contact_model.dart';
+import 'package:bloc_patterns_contacts/pages/creat_page.dart';
 import 'package:bloc_patterns_contacts/services/http_request.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'list_contact_state.dart';
@@ -25,6 +27,13 @@ class ListContactCubit extends Cubit<ListContactState> {
       apiListContact();
     } else {
       emit(ListContactError(error: "Couldn't delete contact"));
+    }
+  }
+
+  callCreatePage(BuildContext context) async {
+    var result = await Navigator.of(context).push(MaterialPageRoute(builder: (context) => CreatePage()));
+    if (result != null) {
+      return BlocProvider.of<ListContactCubit>(context).apiListContact();
     }
   }
 

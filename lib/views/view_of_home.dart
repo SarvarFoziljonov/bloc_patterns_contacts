@@ -1,4 +1,4 @@
-import 'package:bloc_patterns_contacts/pages/models/contact_model.dart';
+import 'package:bloc_patterns_contacts/models/contact_model.dart';
 import 'package:flutter/material.dart';
 
 import 'item_of_contact.dart';

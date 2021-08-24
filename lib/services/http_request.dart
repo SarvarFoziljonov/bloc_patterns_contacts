@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-import 'package:bloc_patterns_contacts/pages/models/contact_model.dart';
+import 'package:bloc_patterns_contacts/models/contact_model.dart';
 import 'package:http/http.dart';
 
 class Network {
